@@ -184,7 +184,7 @@ a {
   width: 80%;
 }
 
-button {
+.button {
   margin-top: 40px;
   margin-left: 10px;
   border-radius: 50%;
@@ -192,7 +192,7 @@ button {
   height: 90px;
   border: none;
   /* padding: 10px; */
-  font-size: 50px;
+  font-size: 20px;
   border: 0px solid rgb(8, 10, 29);
 }
 
@@ -250,18 +250,5 @@ button:hover {
   .main__btn {
     padding: 12px 36px;
     margin: 2.5rem 0;
-  }
-  .button {
-    /* background: linear-gradient(-90deg, #32fc00 5px, #0000 0) 10px 0,
-      linear-gradient(#32fc00 0 0) 0 0; */
-    margin-top: 50px;
-    margin-left: 70px;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    border: n10px;
-    padding: 10px;
-    font-size: 10px;
-    border: 0px solid rgb(8, 10, 29);
   }
 }
