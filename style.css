@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Monospace", sans-serif;
+}
+
+@media screen and (max-width: 960px) {
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    margin: 0;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/*Main content CSS*/
+
+.type {
+  font-size: 1rem;
+  font-family: monospace;
+  color: #0000;
+  background: linear-gradient(-90deg, #32fc00 5px, #0000 0) 10px 0,
+    linear-gradient(#32fc00 0 0) 0 0;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: b 0.5s infinite steps(1),
+    t calc(var(--n) * 0.04s) steps(var(--n)) forwards;
+}
+
+@keyframes t {
+  from {
+    background-size: 0 200%;
+  }
+}
+
+@keyframes b {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.img.resize {
+  width: 100px;
+  height: auto;
+}
+
+.resume {
+  font-size: 1rem;
+  font-family: monospace;
+  background-color: rgb(8, 10, 29);
+  color: #32fc00;
+}
+
+a {
+  color: #32fc00;
+}
+
+.main {
+  background-color: rgb(8, 10, 29);
+}
+
+.main__container {
+  display: flex;
+  align-items: top;
+  justify-self: center;
+  margin: auto auto;
+  height: 2000px;
+  background-color: rgb(8, 10, 29);
+  z-index: 1;
+  width: 100%;
+  max-width: 10000px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.main__content h1 {
+  font-size: 3rem;
+  margin-top: 3rem;
+  background-color: rgb(8, 10, 29);
+  background-image: linear-gradient(to top, #fff 0%, #fff 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  background-color: rgb(9, 23, 53);
+  background-image: linear-gradient(to top, #fff 0%, #fff 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+  color: #e7e7e7;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.main__btn {
+  font-size: 1rem;
+  background-color: #c1c7d8;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+.main__btn a {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main__btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(9, 23, 53);
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.main__btn:hover {
+  color: #fff;
+}
+
+.main__btn:hover:after {
+  width: 100%;
+}
+
+.main__img--container {
+  text-align: center;
+}
+
+#main__img {
+  height: 80%;
+  width: 80%;
+}
+
+.button {
+  margin-top: 40px;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  border: none;
+  /* padding: 10px; */
+  font-size: 20px;
+  border: 0px solid rgb(8, 10, 29);
+}
+
+button:hover {
+  background: #32fc00;
+}
+
+/*Mobile Responsive*/
+@media screen and (max-width: 768px) {
+  .main__container {
+    display: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 200vh;
+  }
+
+  .main__content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .main__content h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+
+  .main__content h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .main__content p {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .main__content h2 {
+    font-size: 2rem;
+  }
+
+  .main__content p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .main__btn {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+}
